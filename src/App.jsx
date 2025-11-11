@@ -53,6 +53,12 @@ function App() {
       todo.id === editId ? { ...todo, text: input} : todo
     }))
   }
+  // filtering todos
+  const filteredTodos = todos.filter((todo) => {
+    if (filter === 'completed') return todo.completed
+    if (filter === 'incomplete') return !todo.complete
+    return true
+  })
   return (
     <>
       
