@@ -46,7 +46,13 @@ function App() {
     setInput(todo.text)
   }
 
-  
+  // function to save the editted todo
+  const saveTodo = (e) => {
+    e.preventDefault()
+    setTodos(todos.map((todo) => {
+      todo.id === editId ? { ...todo, text: input} : todo
+    }))
+  }
   return (
     <>
       
