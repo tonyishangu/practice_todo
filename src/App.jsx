@@ -38,6 +38,14 @@ function App() {
       })
     )
   }
+
+  // funtion to edit
+  const editTodo = (id) => {
+    const todo = todos.filter((t) => t.id === id)
+    setEditId(id)
+    setInput(todo.text)
+  }
+
   
   return (
     <>
