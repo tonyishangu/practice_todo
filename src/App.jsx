@@ -25,6 +25,12 @@ function App() {
     setTodos([newTodo, ...todos])
     setInput('')
   }
+
+  // function to delete a todo
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id))
+  }
+  
   return (
     <>
       
