@@ -76,6 +76,12 @@ function App() {
           {editId ? 'Save' : 'Add'}
         </button>
       </form>
+      {/* filer buttons  */}
+      <div style={styles.filters}>
+        <button onClick={() => setFilter('all')}>All</button>
+        <button onClick={() => setFilter('completed')}>Completed</button>
+        <button onClick={() => setFilter('incomplete')}>Incompleted</button>
+      </div>
     </div>
   )
 }
@@ -89,14 +95,16 @@ const styles = {
     borderRadius: '10px',
     boxShadow: '0 0 10px rgba(0,0,0,0.1)',
     background: 'fff',
-    fontFamily: 'cursive'
+    fontFamily: 'cursive',
+    margin: 'auto'
   },
   title: {
     textAlign: 'center'
   },
   form: {
     display: 'flex',
-    gap: '10px'
+    gap: '10px',
+    marginBottom: '10px'
   },
   input: {
     flex: 1,
