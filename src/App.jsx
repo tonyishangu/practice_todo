@@ -47,7 +47,7 @@ function App() {
   }
 
   // function to save the editted todo
-  const saveTodo = (e) => {
+  const saveEdit = (e) => {
     e.preventDefault()
     setTodos(todos.map((todo) => {
       todo.id === editId ? { ...todo, text: input} : todo
@@ -60,9 +60,23 @@ function App() {
     return true
   })
   return (
-    <>
-      
-    </>
+    <div style={styles.container}>
+      <h1 style={styles.title}>Todo</h1>
+      {/* input form */}
+
+      <form onSubmit={editId ? saveEdit : addTodo} style={styles.form}>
+        <input 
+        type="text"
+        value= {input}
+        placeholder='Enter a todo'
+        onChange={(e) => setInput(e.target.value)}
+        style={styles.input} 
+        />
+        <button type='submit' style={styles.button}>
+          {editId ? 'Save' : 'Add'}
+        </button>
+      </form>
+    </div>
   )
 }
 
