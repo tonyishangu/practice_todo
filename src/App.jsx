@@ -67,3 +67,51 @@ function App() {
 }
 
 export default App
+
+const styles = {
+  container: {
+    maxWidth: '500px',
+    padding: '40px auto',
+    borderRadius: '10px',
+    boxShadow: '0 0 10px rgba(0,0,0,0.1)',
+    background: 'fff',
+    fontFamily: 'cursive'
+  },
+  title: {
+    textAlign: 'center'
+  },
+  form: {
+    display: 'flex',
+    gap: '10px'
+  },
+  input: {
+    flex: 1,
+    padding: '8px'
+  },
+  button: {
+    padding: '8px 16px'
+  },
+  filters: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    margin: '10px 0'
+  },
+  list: {
+    listStyle: 'none',
+    padding: 0
+  },
+  todoItem: {
+    display: 'flex',
+    justifyContent: 'space between',
+    alignItems: 'center',
+    padding: '10px',
+    borderBottom: '1px solid #eee',
+    cursor: 'pointer'
+  },
+  editBtn: {
+    marginRight: '5px'
+  },
+  deleteBtn: {
+    color: 'red'
+  },
+}
